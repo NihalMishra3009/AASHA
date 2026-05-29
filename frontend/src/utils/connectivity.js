@@ -1,5 +1,7 @@
+const BACKEND_BASE_URL =
+  import.meta.env.VITE_BACKEND_API_URL || "http://localhost:8080";
 const DEFAULT_HEALTHCHECK_URL =
-  import.meta.env.VITE_CONNECTIVITY_CHECK_URL || "http://localhost:8080/healthz";
+  import.meta.env.VITE_CONNECTIVITY_CHECK_URL || `${BACKEND_BASE_URL.replace(/\/$/, "")}/healthz`;
 const DEFAULT_INTERNET_CHECK_URL =
   import.meta.env.VITE_INTERNET_CHECK_URL || "https://www.gstatic.com/generate_204";
 const REQUIRE_INTERNET_FOR_ONLINE_STATUS =
