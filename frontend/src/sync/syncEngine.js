@@ -1,7 +1,8 @@
 import { getAllRecords, markRecordSynced } from '../indexeddb/db';
 import { verifyConnectivity } from '../utils/connectivity';
 
-const API_URL = import.meta.env.VITE_SYNC_API_URL || 'http://localhost:8080/records';
+const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:8080';
+const API_URL = import.meta.env.VITE_SYNC_API_URL || `${BACKEND_BASE_URL.replace(/\/$/, '')}/api/records`;
 const inFlightRecordIds = new Set();
 
 function getSourceDevice() {
