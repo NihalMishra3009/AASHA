@@ -357,3 +357,8 @@ Minimum:
 ## License
 
 MIT License
+
+## Live Links
+
+- Frontend: https://aasha12.netlify.app
+- Backend: https://aasha-production-b4f9.up.railway.app
